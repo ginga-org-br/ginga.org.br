@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script>
+    (function () {
+      var languages = navigator.languages || [navigator.language || navigator.userLanguage];
+      var targetLang = 'en';
+      for (var i = 0; i < languages.length; i++) {
+        var lang = languages[i].toLowerCase();
+        if (lang.startsWith('pt')) {
+          targetLang = 'pt';
+          break;
+        } else if (lang.startsWith('es')) {
+          targetLang = 'es';
+          break;
+        } else if (lang.startsWith('en')) {
+          targetLang = 'en';
+          break;
+        }
+      }
+      window.location.replace("./" + targetLang + "/");
+    })();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=./en/">
+  </noscript>
+  <title>ginga.org.br</title>
+</head>
+<body>
+  <p>Redirecting / Redirecionando / Redireccionando...</p>
+</body>
+</html>
