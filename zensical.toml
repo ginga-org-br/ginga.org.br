@@ -1,0 +1,296 @@
+[project]
+docs_dir = "docs"
+site_dir = "site"
+
+site_name = "ginga.org.br"
+site_url = "https://ginga.org.br/"
+
+site_description = "Portal de documentação e especificações do middleware Ginga para TV Digital."
+site_author = "Equipe Ginga.org.br"
+repo_url = "https://github.com/ginga-org-br/ginga.org.br"
+repo_name = "ginga-org-br/ginga.org.br"
+edit_uri = "edit/main/docs/"
+extra_javascript = ["assets/javascripts/extra.js"]
+extra_css = ["assets/stylesheets/extra.css"]
+
+copyright = """
+Copyright &copy; 2026 ginga.org.br team
+"""
+
+nav = [
+  { "Português" = [
+    { "Início" = "pt/index.md" },
+    { "Normas e Recomendações" = "pt/standards.md" },
+    { "Ferramentas de Desenvolvimento" = "pt/development-tools.md" },
+    { "Subsistema Ginga-NCL" = [
+      { "Ginga-NCL" = "pt/gingancl/index.md" },
+      { "Versões NCL" = "pt/gingancl/ncl-versions.md" },
+      { "Manual NCL" = [
+        { "<area>" = "pt/gingancl/handbook/area.md" },
+        { "<assessmentStatement>" = "pt/gingancl/handbook/assessmentstatement.md" },
+        { "<attributeAssessment>" = "pt/gingancl/handbook/attributeassessment.md" },
+        { "<bind>" = "pt/gingancl/handbook/bind.md" },
+        { "<bindParam>" = "pt/gingancl/handbook/bindparam.md" },
+        { "<bindRule>" = "pt/gingancl/handbook/bindrule.md" },
+        { "<body>" = "pt/gingancl/handbook/body.md" },
+        { "<causalConnector>" = "pt/gingancl/handbook/causalconnector.md" },
+        { "<compositeRule>" = "pt/gingancl/handbook/compositerule.md" },
+        { "<compoundAction>" = "pt/gingancl/handbook/compoundaction.md" },
+        { "<compoundCondition>" = "pt/gingancl/handbook/compoundcondition.md" },
+        { "<compoundStatement>" = "pt/gingancl/handbook/compoundstatement.md" },
+        { "<connectorBase>" = "pt/gingancl/handbook/connectorbase.md" },
+        { "<connectorParam>" = "pt/gingancl/handbook/connectorparam.md" },
+        { "<context>" = "pt/gingancl/handbook/context.md" },
+        { "<defaultComponent>" = "pt/gingancl/handbook/defaultcomponent.md" },
+        { "<defaultDescriptor>" = "pt/gingancl/handbook/defaultdescriptor.md" },
+        { "<descriptor>" = "pt/gingancl/handbook/descriptor.md" },
+        { "<descriptorBase>" = "pt/gingancl/handbook/descriptorbase.md" },
+        { "<descriptorParam>" = "pt/gingancl/handbook/descriptorparam.md" },
+        { "<descriptorSwitch>" = "pt/gingancl/handbook/descriptorswitch.md" },
+        { "<footer>" = "pt/gingancl/handbook/footer.md" },
+        { "<head>" = "pt/gingancl/handbook/head.md" },
+        { "Visão Geral" = "pt/gingancl/handbook/home.md" },
+        { "<importBase>" = "pt/gingancl/handbook/importbase.md" },
+        { "<importedDocumentBase>" = "pt/gingancl/handbook/importeddocumentbase.md" },
+        { "<importNCL>" = "pt/gingancl/handbook/importncl.md" },
+        { "<link>" = "pt/gingancl/handbook/link.md" },
+        { "<linkParam>" = "pt/gingancl/handbook/linkparam.md" },
+        { "<mapping>" = "pt/gingancl/handbook/mapping.md" },
+        { "<media>" = "pt/gingancl/handbook/media.md" },
+        { "<meta>" = "pt/gingancl/handbook/meta.md" },
+        { "<metadata>" = "pt/gingancl/handbook/metadata.md" },
+        { "<ncl>" = "pt/gingancl/handbook/ncl.md" },
+        { "<port>" = "pt/gingancl/handbook/port.md" },
+        { "<property>" = "pt/gingancl/handbook/property.md" },
+        { "<region>" = "pt/gingancl/handbook/region.md" },
+        { "<regionBase>" = "pt/gingancl/handbook/regionbase.md" },
+        { "<rule>" = "pt/gingancl/handbook/rule.md" },
+        { "<ruleBase>" = "pt/gingancl/handbook/rulebase.md" },
+        { "<simpleAction>" = "pt/gingancl/handbook/simpleaction.md" },
+        { "<simpleCondition>" = "pt/gingancl/handbook/simplecondition.md" },
+        { "<switch>" = "pt/gingancl/handbook/switch.md" },
+        { "<switchPort>" = "pt/gingancl/handbook/switchport.md" },
+        { "<transition>" = "pt/gingancl/handbook/transition.md" },
+        { "<transitionBase>" = "pt/gingancl/handbook/transitionbase.md" },
+        { "<valueAssessment>" = "pt/gingancl/handbook/valueassessment.md" },
+      ] },
+    ] },
+    { "Outros Subsistemas" = [
+      { "Ginga-HTML5" = "pt/gingahtml5/index.md" },
+      { "Ginga-CC-WebServices" = "pt/gingaccwebservices/index.md" },
+      { "Ginga-J" = "pt/gingaj.md" },
+    ] },
+  ] },
+  { "English" = [
+    { "Home" = "en/index.md" },
+    { "Standards and Recommendations" = "en/standards.md" },
+    { "Development Tools" = "en/development-tools.md" },
+    { "Ginga-NCL Subsystem" = [
+      { "Ginga-NCL" = "en/gingancl/index.md" },
+      { "NCL Versions" = "en/gingancl/ncl-versions.md" },
+      { "NCL Handbook" = [
+        { "<area>" = "en/gingancl/handbook/area.md" },
+        { "<assessmentStatement>" = "en/gingancl/handbook/assessmentstatement.md" },
+        { "<attributeAssessment>" = "en/gingancl/handbook/attributeassessment.md" },
+        { "<bind>" = "en/gingancl/handbook/bind.md" },
+        { "<bindParam>" = "en/gingancl/handbook/bindparam.md" },
+        { "<bindRule>" = "en/gingancl/handbook/bindrule.md" },
+        { "<body>" = "en/gingancl/handbook/body.md" },
+        { "<causalConnector>" = "en/gingancl/handbook/causalconnector.md" },
+        { "<compositeRule>" = "en/gingancl/handbook/compositerule.md" },
+        { "<compoundAction>" = "en/gingancl/handbook/compoundaction.md" },
+        { "<compoundCondition>" = "en/gingancl/handbook/compoundcondition.md" },
+        { "<compoundStatement>" = "en/gingancl/handbook/compoundstatement.md" },
+        { "<connectorBase>" = "en/gingancl/handbook/connectorbase.md" },
+        { "<connectorParam>" = "en/gingancl/handbook/connectorparam.md" },
+        { "<context>" = "en/gingancl/handbook/context.md" },
+        { "<defaultComponent>" = "en/gingancl/handbook/defaultcomponent.md" },
+        { "<defaultDescriptor>" = "en/gingancl/handbook/defaultdescriptor.md" },
+        { "<descriptor>" = "en/gingancl/handbook/descriptor.md" },
+        { "<descriptorBase>" = "en/gingancl/handbook/descriptorbase.md" },
+        { "<descriptorParam>" = "en/gingancl/handbook/descriptorparam.md" },
+        { "<descriptorSwitch>" = "en/gingancl/handbook/descriptorswitch.md" },
+        { "<footer>" = "en/gingancl/handbook/footer.md" },
+        { "<head>" = "en/gingancl/handbook/head.md" },
+        { "Overview" = "en/gingancl/handbook/home.md" },
+        { "<importBase>" = "en/gingancl/handbook/importbase.md" },
+        { "<importedDocumentBase>" = "en/gingancl/handbook/importeddocumentbase.md" },
+        { "<importNCL>" = "en/gingancl/handbook/importncl.md" },
+        { "<link>" = "en/gingancl/handbook/link.md" },
+        { "<linkParam>" = "en/gingancl/handbook/linkparam.md" },
+        { "<mapping>" = "en/gingancl/handbook/mapping.md" },
+        { "<media>" = "en/gingancl/handbook/media.md" },
+        { "<meta>" = "en/gingancl/handbook/meta.md" },
+        { "<metadata>" = "en/gingancl/handbook/metadata.md" },
+        { "<ncl>" = "en/gingancl/handbook/ncl.md" },
+        { "<port>" = "en/gingancl/handbook/port.md" },
+        { "<property>" = "en/gingancl/handbook/property.md" },
+        { "<region>" = "en/gingancl/handbook/region.md" },
+        { "<regionBase>" = "en/gingancl/handbook/regionbase.md" },
+        { "<rule>" = "en/gingancl/handbook/rule.md" },
+        { "<ruleBase>" = "en/gingancl/handbook/rulebase.md" },
+        { "<simpleAction>" = "en/gingancl/handbook/simpleaction.md" },
+        { "<simpleCondition>" = "en/gingancl/handbook/simplecondition.md" },
+        { "<switch>" = "en/gingancl/handbook/switch.md" },
+        { "<switchPort>" = "en/gingancl/handbook/switchport.md" },
+        { "<transition>" = "en/gingancl/handbook/transition.md" },
+        { "<transitionBase>" = "en/gingancl/handbook/transitionbase.md" },
+        { "<valueAssessment>" = "en/gingancl/handbook/valueassessment.md" },
+      ] },
+    ] },
+    { "More Subsystems" = [
+      { "Ginga-HTML5" = "en/gingahtml5/index.md" },
+      { "Ginga-CC-WebServices" = "en/gingaccwebservices/index.md" },
+      { "Ginga-J" = "en/gingaj.md" },
+    ] },
+  ] },
+  { "Español" = [
+    { "Inicio" = "es/index.md" },
+    { "Estándares y Recomendaciones" = "es/standards.md" },
+    { "Herramientas de Desarrollo" = "es/development-tools.md" },
+    { "Subsistema Ginga-NCL" = [
+      { "Ginga-NCL" = "es/gingancl/index.md" },
+      { "Versiones NCL" = "es/gingancl/ncl-versions.md" },
+      { "Manual NCL" = [
+        { "<area>" = "es/gingancl/handbook/area.md" },
+        { "<assessmentStatement>" = "es/gingancl/handbook/assessmentstatement.md" },
+        { "<attributeAssessment>" = "es/gingancl/handbook/attributeassessment.md" },
+        { "<bind>" = "es/gingancl/handbook/bind.md" },
+        { "<bindParam>" = "es/gingancl/handbook/bindparam.md" },
+        { "<bindRule>" = "es/gingancl/handbook/bindrule.md" },
+        { "<body>" = "es/gingancl/handbook/body.md" },
+        { "<causalConnector>" = "es/gingancl/handbook/causalconnector.md" },
+        { "<compositeRule>" = "es/gingancl/handbook/compositerule.md" },
+        { "<compoundAction>" = "es/gingancl/handbook/compoundaction.md" },
+        { "<compoundCondition>" = "es/gingancl/handbook/compoundcondition.md" },
+        { "<compoundStatement>" = "es/gingancl/handbook/compoundstatement.md" },
+        { "<connectorBase>" = "es/gingancl/handbook/connectorbase.md" },
+        { "<connectorParam>" = "es/gingancl/handbook/connectorparam.md" },
+        { "<context>" = "es/gingancl/handbook/context.md" },
+        { "<defaultComponent>" = "es/gingancl/handbook/defaultcomponent.md" },
+        { "<defaultDescriptor>" = "es/gingancl/handbook/defaultdescriptor.md" },
+        { "<descriptor>" = "es/gingancl/handbook/descriptor.md" },
+        { "<descriptorBase>" = "es/gingancl/handbook/descriptorbase.md" },
+        { "<descriptorParam>" = "es/gingancl/handbook/descriptorparam.md" },
+        { "<descriptorSwitch>" = "es/gingancl/handbook/descriptorswitch.md" },
+        { "<footer>" = "es/gingancl/handbook/footer.md" },
+        { "<head>" = "es/gingancl/handbook/head.md" },
+        { "Visión General" = "es/gingancl/handbook/home.md" },
+        { "<importBase>" = "es/gingancl/handbook/importbase.md" },
+        { "<importedDocumentBase>" = "es/gingancl/handbook/importeddocumentbase.md" },
+        { "<importNCL>" = "es/gingancl/handbook/importncl.md" },
+        { "<link>" = "es/gingancl/handbook/link.md" },
+        { "<linkParam>" = "es/gingancl/handbook/linkparam.md" },
+        { "<mapping>" = "es/gingancl/handbook/mapping.md" },
+        { "<media>" = "es/gingancl/handbook/media.md" },
+        { "<meta>" = "es/gingancl/handbook/meta.md" },
+        { "<metadata>" = "es/gingancl/handbook/metadata.md" },
+        { "<ncl>" = "es/gingancl/handbook/ncl.md" },
+        { "<port>" = "es/gingancl/handbook/port.md" },
+        { "<property>" = "es/gingancl/handbook/property.md" },
+        { "<region>" = "es/gingancl/handbook/region.md" },
+        { "<regionBase>" = "es/gingancl/handbook/regionbase.md" },
+        { "<rule>" = "es/gingancl/handbook/rule.md" },
+        { "<ruleBase>" = "es/gingancl/handbook/rulebase.md" },
+        { "<simpleAction>" = "es/gingancl/handbook/simpleaction.md" },
+        { "<simpleCondition>" = "es/gingancl/handbook/simplecondition.md" },
+        { "<switch>" = "es/gingancl/handbook/switch.md" },
+        { "<switchPort>" = "es/gingancl/handbook/switchport.md" },
+        { "<transition>" = "es/gingancl/handbook/transition.md" },
+        { "<transitionBase>" = "es/gingancl/handbook/transitionbase.md" },
+        { "<valueAssessment>" = "es/gingancl/handbook/valueassessment.md" },
+      ] },
+    ] },
+    { "Otros Subsistemas" = [
+      { "Ginga-HTML5" = "es/gingahtml5/index.md" },
+      { "Ginga-CC-WebServices" = "es/gingaccwebservices/index.md" },
+      { "Ginga-J" = "es/gingaj.md" },
+    ] },
+  ] },
+]
+
+
+[project.theme]
+custom_dir = "theme"
+logo = "assets/favicon.png"
+favicon = "assets/favicon.png"
+
+language = "pt"
+
+features = [
+  "announce.dismiss",
+  "content.action.edit",
+  "content.code.annotate",
+  "content.code.copy",
+  "content.code.select",
+  "content.footnote.tooltips",
+  "content.tabs.link",
+  "content.tooltips",
+  "navigation.sections",
+  "search.highlight",
+]
+
+[[project.theme.palette]]
+scheme = "default"
+primary = "white"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+primary = "black"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to light mode"
+
+[project.extra]
+alternate = [
+  { name = "Português", link = "/pt/", lang = "pt" },
+  { name = "English", link = "/en/", lang = "en" },
+  { name = "Español", link = "/es/", lang = "es" },
+]
+
+[project.plugins.search]
+separator = '[\s\-_,:!=\[\]()\\"`/]+|\.(?!\d)'
+
+[project.markdown_extensions.abbr]
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.pymdownx.snippets]
+auto_append = [
+  "includes/abbreviations_pt.md",
+  "includes/abbreviations_en.md",
+  "includes/abbreviations_es.md",
+]
+
+[project.markdown_extensions.def_list]
+[project.markdown_extensions.footnotes]
+[project.markdown_extensions.md_in_html]
+[project.markdown_extensions.toc]
+permalink = true
+[project.markdown_extensions.pymdownx.arithmatex]
+generic = true
+[project.markdown_extensions.pymdownx.betterem]
+[project.markdown_extensions.pymdownx.caret]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.emoji]
+emoji_generator = "zensical.extensions.emoji.to_svg"
+emoji_index = "zensical.extensions.emoji.twemoji"
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+line_spans = "__span"
+pygments_lang_class = true
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.keys]
+[project.markdown_extensions.pymdownx.magiclink]
+[project.markdown_extensions.pymdownx.mark]
+[project.markdown_extensions.pymdownx.smartsymbols]
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+combine_header_slug = true
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true
+[project.markdown_extensions.pymdownx.tilde]
