@@ -1,0 +1,6 @@
+site/
+.DS_Store
+docs/en/assets/
+docs/pt/assets/
+docs/es/assets/
+site.zip

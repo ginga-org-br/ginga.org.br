@@ -1,0 +1,63 @@
+table td, table th {
+    word-break: break-word !important;
+    white-space: normal !important;
+}
+
+.subsystem-grid {
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+@media screen and (min-width: 600px) {
+    .subsystem-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+
+.md-typeset__table table {
+    width: 100% !important;
+    display: table !important;
+}
+
+.md-playground-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.75rem;
+    margin-left: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--md-default-fg-color--icon, rgba(0, 0, 0, 0.15));
+    color: var(--md-default-fg-color, currentColor) !important;
+    text-decoration: none !important;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+    line-height: 1.2;
+}
+
+.md-playground-button:hover {
+    background-color: var(--md-accent-fallback-color, #0066cc);
+    border-color: var(--md-accent-fallback-color, #0066cc);
+    color: #ffffff !important;
+    transform: translateY(-1px);
+}
+
+.md-playground-icon {
+    flex-shrink: 0;
+    fill: currentColor;
+}
+
+@media screen and (max-width: 600px) {
+    .md-playground-text {
+        display: none;
+    }
+    .md-playground-button {
+        padding: 0.4rem;
+        border-radius: 50%;
+    }
+}
+
+
+

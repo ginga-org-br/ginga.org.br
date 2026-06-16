@@ -1,0 +1,67 @@
+name: Deploy site to Pages
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate redirect page
+        run: |
+          mkdir -p site
+          cat << 'EOF' > site/index.html
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Redirecting to ginga.org.br</title>
+            <meta http-equiv="refresh" content="0; url=https://ginga.org.br/">
+            <link rel="canonical" href="https://ginga.org.br/">
+            <script>
+              (function () {
+                var pathname = window.location.pathname;
+                var pathSegments = pathname.split('/').filter(Boolean);
+                var subpath = '/';
+                if (window.location.hostname.endsWith('github.io')) {
+                  if (pathSegments.length > 1) {
+                    subpath = '/' + pathSegments.slice(1).join('/') + (pathname.endsWith('/') ? '/' : '');
+                  }
+                } else if (pathSegments.length > 0) {
+                  subpath = '/' + pathSegments.join('/') + (pathname.endsWith('/') ? '/' : '');
+                }
+                window.location.replace("https://ginga.org.br" + subpath + window.location.search + window.location.hash);
+              })();
+            </script>
+          </head>
+          <body>
+            <p>Redirecting to <a href="https://ginga.org.br/">ginga.org.br</a>...</p>
+          </body>
+          </html>
+          EOF
+          cp site/index.html site/404.html
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v6
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
