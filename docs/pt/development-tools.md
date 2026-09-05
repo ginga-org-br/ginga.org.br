@@ -12,7 +12,7 @@
 
     Ambiente de execução online para experimentar com aplicações Ginga (NCL e HTML5), baseado no [gingaf](https://github.com/ginga-org-br/gingaf).
 
-    [:octicons-arrow-right-24: Experimentar](https://ginga-org-br.github.io/gingaf/playground/)
+    [:octicons-arrow-right-24: Experimentar](/gingaf/playground/)
 
 </div>
 

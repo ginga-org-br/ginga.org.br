@@ -12,7 +12,7 @@
 
     Online execution environment to experiment with Ginga applications (NCL and HTML5), powered by [gingaf](https://github.com/ginga-org-br/gingaf).
 
-    [:octicons-arrow-right-24: Try it](https://ginga-org-br.github.io/gingaf/playground/)
+    [:octicons-arrow-right-24: Try it](/gingaf/playground/)
 
 </div>
 
