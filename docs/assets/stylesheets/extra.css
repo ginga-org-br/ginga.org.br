@@ -59,5 +59,7 @@ table td, table th {
     }
 }
 
-
+.md-grid {
+    max-width: 72rem;
+}
 
