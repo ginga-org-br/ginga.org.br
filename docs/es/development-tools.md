@@ -1,4 +1,29 @@
+---
+title: "Herramientas de Desarrollo"
+---
+
+<style>
+.md-typeset .guide-byline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--md-default-fg-color--light);
+  margin: 0 0 1.2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+.md-typeset .guide-byline b {
+  color: var(--md-default-fg-color);
+  font-weight: 600;
+}
+</style>
+
 # Herramientas de Desarrollo
+
+<p class="guide-byline"><span>Por <b>Alan Guedes</b> (University of Reading)</span></p>
 
 <div class="grid cards" markdown>
 
@@ -14,14 +39,6 @@
 
     [:octicons-arrow-right-24: Probar](/gingaf/playground/)
 
-</div>
-
-## Playground Interactivo
-
-Edite y ejecute aplicaciones Ginga directamente en su navegador:
-
-<div class="ginga-playground-container">
-  <iframe class="ginga-playground" src="/gingaf/playground/?mode=embed&example=video" loading="lazy" title="Ginga Playground"></iframe>
 </div>
 
 ## Otras Herramientas
