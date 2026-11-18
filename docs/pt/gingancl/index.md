@@ -18,7 +18,22 @@ A NCL tem uma separação mais rígida entre o conteúdo e a estrutura do aplica
 
 Como uma linguagem *cola*, a NCL não restringe nem prescreve qualquer tipo de conteúdo do objeto de mídia.  Quais objetos de mídia são suportados depende do reprodutores de mídia incorporados no formatador NCL (o reprodutor NCL).
 
- Portanto, podemos ter conteúdos perceptivos, como vídeos, imagens, áudios e textos, como objetos de mídia NCL.  Também podemos ter objetos de mídia com imperativo conteúdo de código, como código Lua, código ECMAScript, código Java, etc. Além disso, podemos ter objetos de mídia com conteúdo de código declarativo, como baseado em HTML código, código SVG, código X3D, código SMIL, código NCL (sim, aplicativos NCL incorporados outras aplicações NCL), etc. Portanto, NCL não substitui, mas incorpora aplicações de outras línguas, relacionando todos os objetos no tempo e no espaço em uma apresentação distribuída em vários dispositivos.
+Portanto, podemos ter conteúdos perceptivos, como vídeos, imagens, áudios e textos, como objetos de mídia NCL.  Também podemos ter objetos de mídia com imperativo conteúdo de código, como código Lua, código ECMAScript, código Java, etc. Além disso, podemos ter objetos de mídia com conteúdo de código declarativo, como baseado em HTML código, código SVG, código X3D, código SMIL, código NCL (sim, aplicativos NCL incorporados outras aplicações NCL), etc. Portanto, NCL não substitui, mas incorpora aplicações de outras línguas, relacionando todos os objetos no tempo e no espaço em uma apresentação distribuída em vários dispositivos.
+
+## Versões NCL
+
+As seguintes instruções de processamento devem ser escritas em um documento NCL. Elas identificam as aplicações NCL e a versão NCL com a qual o documento está em conformidade.
+
+```xml
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ncl id="any string" xmlns="http://www.ncl.org.br/NCL3.0/profileName">
+```
+
+Uma versão específica é indicada no caminho URI, onde o número da versão "x.y" é escrito imediatamente após "/NCL".
+
+O número de versão de uma especificação de documento NCL consiste em um número principal e um número menor, separados por um ponto. Os números são representados como cadeias de caracteres decimais com zeros à esquerda suprimidos. O número da versão padrão inicial é 3.0.
+
+Novas versões NCL devem ser lançadas de acordo com a seguinte política de versionamento. Se os exibidores NCL compatíveis com versões mais antigas ainda puderem receber um documento baseado na especificação revisada — devido a correções de erros, razões operacionais ou à adição de uma nova notação de sintaxe concisa ("açúcar sintático") que possa ser traduzida em tempo de compilação para a anterior —, a nova versão da NCL deverá ser lançada com o número menor atualizado. Se exibidores NCL em conformidade com versões mais antigas não puderem receber um documento baseado nas especificações revisadas, o número principal deve ser atualizado.
 
 ## Relatórios PUC-Rio
 

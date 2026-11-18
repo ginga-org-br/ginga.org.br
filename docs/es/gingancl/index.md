@@ -20,6 +20,21 @@ Como lenguaje *pegamento*, NCL no restringe ni prescribe ningún tipo de conteni
 
 Por lo tanto, podemos tener contenido perceptual, como videos, imágenes, audios y textos, como objetos multimedia NCL.  También podemos tener objetos multimedia con imperativo contenido del código, como código Lua, código ECMAScript, código Java, etc. Además, podemos tener objetos multimedia con contenido de código declarativo, como los basados en HTML código, código SVG, código X3D, código SMIL, código NCL (sí, las aplicaciones NCL incorporan otras aplicaciones NCL), etc. Por lo tanto, NCL no sustituye sino que incorpora aplicaciones de otros lenguajes, relacionando todos los objetos en el tiempo y el espacio en una presentación distribuida en múltiples dispositivos.
 
+## Versiones NCL
+
+Las siguientes instrucciones de procesamiento deben escribirse en un documento NCL. Identifican las aplicaciones NCL y la versión NCL con la que cumple el documento.
+
+```xml
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ncl id="any string" xmlns="http://www.ncl.org.br/NCL3.0/profileName">
+```
+
+Una versión específica se indica en la ruta URI, donde el número de versión "x.y" se escribe inmediatamente después de "/NCL".
+
+El número de versión de una especificación de documento NCL consta de un número mayor y un número menor, separados por un punto. Los números se representan como cadenas de caracteres decimales con los ceros a la izquierda suprimidos. El número de versión estándar inicial es 3.0.
+
+Las nuevas versiones de NCL se publicarán de acuerdo con la siguiente política de versionado. Si los reproductores NCL compatibles con versiones anteriores aún pueden recibir un documento basado en la especificación revisada — debido a correcciones de errores, razones operativas o la adición de una nueva notación de sintaxis concisa ("azúcar sintáctico") que pueda traducirse en tiempo de compilación a la anterior —, la nueva versión de NCL se publicará actualizando el número menor. Si los reproductores NCL compatibles con versiones anteriores no pueden recibir un documento basado en las especificaciones revisadas, debe actualizarse el número mayor.
+
 ## Informes de la PUC-Rio
 
 - Luiz Fernando Gomes Soares.  

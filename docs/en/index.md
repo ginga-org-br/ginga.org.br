@@ -51,7 +51,7 @@ Ginga was developed by [Telemídia Lab](http://www.telemidia.puc-rio.br) from [P
 
 _Ginga_ is an almost indefinable, mystical quality of movement and attitude possessed by Brazilians and evident in everything they do. The way they walk, talk, dance and approach everything in their lives.
 
-![](/assets/ginga.gif)
+![](/assets/ginga.gif){ style="display: block; margin: 0 auto;" }
 
 The _ginga_ (literally: rocking back and forth; to swing) is the fundamental movement in capoeira.
 

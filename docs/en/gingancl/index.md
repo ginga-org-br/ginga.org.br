@@ -42,6 +42,21 @@ other NCL applications), etc.  Therefore, NCL does not substitute but embeds
 other language's applications, relating all objects in time and space in a
 multiple device distributed presentation.
 
+## NCL Versions
+
+The following processing instructions must be written in an NCL document. They identify NCL applications and the NCL version to which the document conforms.
+
+```xml
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ncl id="any string" xmlns="http://www.ncl.org.br/NCL3.0/profileName">
+```
+
+A specific version is specified in the URI path, where the version number "x.y" is written immediately after the "/NCL".
+
+The version number of an NCL document specification consists of a major number and a minor number, separated by a dot.  The numbers are represented as decimal character strings with leading zeros suppressed.  The initial standard version number is 3.0.
+
+New NCL versions shall be released in accordance to the following versioning policy.  If NCL players that conform to older versions can still receive a document based on the revised specification, due to error corrections, operational reasons, or the addition of a new concise syntax notation ("syntax sugar") that can be translated at compile time to the old one, the new version of NCL shall be released with the minor number updated.  If NCL players that conform to older versions cannot receive a document based on the revised specifications, the major number must be updated.
+
 ## PUC-Rio Seminal Reports
 
 These are seminal texts written by Luiz Fernando about the NCL and NCM.

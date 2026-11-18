@@ -25,6 +25,8 @@ title: "Development Tools"
 
 <p class="guide-byline"><span>By <b>Alan Guedes</b> (University of Reading)</span></p>
 
+The currently maintained tools are **ginga-code** and **ginga-playground**, while the others listed below are previous tools that are no longer maintained.
+
 <div class="grid cards" markdown>
 
 - :material-microsoft-visual-studio-code: **ginga-code**

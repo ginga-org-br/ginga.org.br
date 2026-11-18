@@ -51,7 +51,7 @@ Ginga es el resultado del desarrollo de proyectos de investigación coordinados 
 
 _Ginga_ es una cualidad, casi indefinible, de movimiento y actitud que poseen los brasileños y que es evidente en todo lo que hacen. La forma en la que caminan, hablan, bailan y se relacionan con todo en sus vidas.
 
-![](/assets/ginga.gif)
+![](/assets/ginga.gif){ style="display: block; margin: 0 auto;" }
 
 La _ginga_ es un movimiento fundamental de la _capoeira_, una forma de lucha por la libertad y la igualdad.
 

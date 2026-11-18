@@ -49,7 +49,9 @@ O Ginga é fruto do desenvolvimento de projetos de pesquisa coordenados pelos la
 
 ## Por que o nome Ginga?
 
-_Ginga_ é uma qualidade, quase indefinível, de movimento e atitude que nós brasileiros possuímos e que é evidente em tudo o que fazemos. A forma como caminhamos, falamos, dançamos e nos relacionamos com tudo em nossas vidas.   ![](/assets/ginga.gif)
+_Ginga_ é uma qualidade, quase indefinível, de movimento e atitude que nós brasileiros possuímos e que é evidente em tudo o que fazemos. A forma como caminhamos, falamos, dançamos e nos relacionamos com tudo em nossas vidas.
+
+![](/assets/ginga.gif){ style="display: block; margin: 0 auto;" }
 
 A _ginga_ é um movimento fundamental da capoeira, nossa forma de luta por liberdade e igualdade.  
 

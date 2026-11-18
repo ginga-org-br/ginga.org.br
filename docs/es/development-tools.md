@@ -25,6 +25,8 @@ title: "Herramientas de Desarrollo"
 
 <p class="guide-byline"><span>Por <b>Alan Guedes</b> (University of Reading)</span></p>
 
+Las herramientas mantenidas actualmente son **ginga-code** y **ginga-playground**, mientras que las demás listadas a continuación son herramientas anteriores que ya no reciben mantenimiento.
+
 <div class="grid cards" markdown>
 
 - :material-microsoft-visual-studio-code: **ginga-code**
