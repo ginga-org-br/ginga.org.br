@@ -19,13 +19,16 @@ Copyright &copy; 2026 ginga.org.br team
 
 nav = [
     { "Português" = [
-        { "Início" = "pt/index.md" },
-        { "Normas e Recomendações" = "pt/standards.md" },
-        { "Ferramentas de Desenvolvimento" = "pt/development-tools.md" },
-        { "Subsistema Ginga-NCL" = [
-            { "Ginga-NCL" = "pt/gingancl/index.md" },
-            { "Versões NCL" = "pt/gingancl/ncl-versions.md" },
-            { "Manual NCL" = [
+        { "Intro" = "pt/index.md" },
+        { "Normas" = "pt/standards.md" },
+        { "Guias" = [
+            { "Arquitetura da TV 3.0" = "pt/guides/tv3.0-architecture.md" },
+            { "Ferramentas de Desenvolvimento" = "pt/development-tools.md" },
+        ] },
+        { "Subsistemas" = [
+            { "Ginga-NCL" = [
+                { "Sobre o Ginga-NCL" = "pt/gingancl/index.md" },
+                { "Manual NCL" = [
                 { "Sobre o NCL Handbook" = "pt/gingancl/handbook/about.md" },
                 { "<area>" = "pt/gingancl/handbook/area.md" },
                 { "<assessmentStatement>" = "pt/gingancl/handbook/assessmentstatement.md" },
@@ -73,22 +76,24 @@ nav = [
                 { "<transition>" = "pt/gingancl/handbook/transition.md" },
                 { "<transitionBase>" = "pt/gingancl/handbook/transitionbase.md" },
                 { "<valueAssessment>" = "pt/gingancl/handbook/valueassessment.md" },
+                ] },
             ] },
-        ] },
-        { "Outros Subsistemas" = [
             { "Ginga-HTML5" = "pt/gingahtml5/index.md" },
             { "Ginga-CC-WebServices" = "pt/gingaccwebservices/index.md" },
             { "Ginga-J" = "pt/gingaj.md" },
         ] },
     ] },
     { "English" = [
-        { "Home" = "en/index.md" },
-        { "Standards and Recommendations" = "en/standards.md" },
-        { "Development Tools" = "en/development-tools.md" },
-        { "Ginga-NCL Subsystem" = [
-            { "Ginga-NCL" = "en/gingancl/index.md" },
-            { "NCL Versions" = "en/gingancl/ncl-versions.md" },
-            { "NCL Handbook" = [
+        { "Intro" = "en/index.md" },
+        { "Standards" = "en/standards.md" },
+        { "Guides" = [
+            { "TV 3.0 Architecture" = "en/guides/tv3.0-architecture.md" },
+            { "Development Tools" = "en/development-tools.md" },
+        ] },
+        { "Subsystems" = [
+            { "Ginga-NCL" = [
+                { "About Ginga-NCL" = "en/gingancl/index.md" },
+                { "NCL Handbook" = [
                 { "About NCL Handbook" = "en/gingancl/handbook/about.md" },
                 { "<area>" = "en/gingancl/handbook/area.md" },
                 { "<assessmentStatement>" = "en/gingancl/handbook/assessmentstatement.md" },
@@ -136,22 +141,24 @@ nav = [
                 { "<transition>" = "en/gingancl/handbook/transition.md" },
                 { "<transitionBase>" = "en/gingancl/handbook/transitionbase.md" },
                 { "<valueAssessment>" = "en/gingancl/handbook/valueassessment.md" },
+                ] },
             ] },
-        ] },
-        { "More Subsystems" = [
             { "Ginga-HTML5" = "en/gingahtml5/index.md" },
             { "Ginga-CC-WebServices" = "en/gingaccwebservices/index.md" },
             { "Ginga-J" = "en/gingaj.md" },
         ] },
     ] },
     { "Español" = [
-        { "Inicio" = "es/index.md" },
-        { "Estándares y Recomendaciones" = "es/standards.md" },
-        { "Herramientas de Desarrollo" = "es/development-tools.md" },
-        { "Subsistema Ginga-NCL" = [
-            { "Ginga-NCL" = "es/gingancl/index.md" },
-            { "Versiones NCL" = "es/gingancl/ncl-versions.md" },
-            { "Manual NCL" = [
+        { "Intro" = "es/index.md" },
+        { "Normas" = "es/standards.md" },
+        { "Guías" = [
+            { "Arquitectura de la TV 3.0" = "es/guides/tv3.0-architecture.md" },
+            { "Herramientas de Desarrollo" = "es/development-tools.md" },
+        ] },
+        { "Subsistemas" = [
+            { "Ginga-NCL" = [
+                { "Sobre Ginga-NCL" = "es/gingancl/index.md" },
+                { "Manual NCL" = [
                 { "Sobre el NCL Handbook" = "es/gingancl/handbook/about.md" },
                 { "<area>" = "es/gingancl/handbook/area.md" },
                 { "<assessmentStatement>" = "es/gingancl/handbook/assessmentstatement.md" },
@@ -199,9 +206,8 @@ nav = [
                 { "<transition>" = "es/gingancl/handbook/transition.md" },
                 { "<transitionBase>" = "es/gingancl/handbook/transitionbase.md" },
                 { "<valueAssessment>" = "es/gingancl/handbook/valueassessment.md" },
+                ] },
             ] },
-        ] },
-        { "Otros Subsistemas" = [
             { "Ginga-HTML5" = "es/gingahtml5/index.md" },
             { "Ginga-CC-WebServices" = "es/gingaccwebservices/index.md" },
             { "Ginga-J" = "es/gingaj.md" },
@@ -226,7 +232,6 @@ features = [
     "content.footnote.tooltips",
     "content.tabs.link",
     "content.tooltips",
-    "navigation.sections",
     "search.highlight",
 ]
 
