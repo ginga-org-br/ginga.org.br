@@ -88,4 +88,42 @@
       return originalFetch.apply(this, arguments);
     };
   }
+
+  function bindPlaygroundTabs(root) {
+    if (!root || typeof root.querySelectorAll !== 'function') return;
+    var containers = root.querySelectorAll('.ginga-playground-container');
+    containers.forEach(function (container) {
+      if (container.getAttribute('data-playground-bound') === 'true') return;
+      container.setAttribute('data-playground-bound', 'true');
+      var iframe = container.querySelector('iframe.ginga-playground');
+      var tabs = container.querySelectorAll('.ginga-playground-tab');
+      if (!iframe || !tabs.length) return;
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var nextSrc = tab.getAttribute('data-playground-src');
+          tabs.forEach(function (t) {
+            t.setAttribute('aria-selected', t === tab ? 'true' : 'false');
+          });
+          if (nextSrc && iframe.getAttribute('src') !== nextSrc) {
+            iframe.setAttribute('src', nextSrc);
+          }
+        });
+      });
+    });
+  }
+
+  if (typeof document !== 'undefined' && typeof document.addEventListener === 'function') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function () {
+        bindPlaygroundTabs(document);
+      });
+    } else {
+      bindPlaygroundTabs(document);
+    }
+  }
+  if (typeof window !== 'undefined' && window.document$ && typeof window.document$.subscribe === 'function') {
+    window.document$.subscribe(function (doc) {
+      bindPlaygroundTabs(doc || document);
+    });
+  }
 })();

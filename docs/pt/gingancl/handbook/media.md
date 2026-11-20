@@ -4,6 +4,24 @@ title: "Elemento &lt;media&gt;"
 
 # &lt;media&gt;
 
+Explore os exemplos de `<media>` abaixo:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Exemplos do Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/image.ncl">image.ncl</button>
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="false" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/video.ncl">video.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/image.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 O elemento [&lt;media&gt;](media.md) define um objeto de mídia contendo: mídia perceptual
 conteúdo; conteúdo de código imperativo; conteúdo de código declarativo; Conteúdo UTC; ou
 variáveis globais para o aplicativo. O tipo de objeto é definido pelo

@@ -63,3 +63,59 @@ table td, table th {
     max-width: 72rem;
 }
 
+.ginga-playground-container {
+    width: 100%;
+    margin: 1rem 0;
+    border: 1px solid var(--md-default-fg-color--lightest, rgba(0, 0, 0, 0.12));
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.ginga-playground-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    padding: 0.4rem 0.5rem 0;
+    background-color: var(--md-code-bg-color, #f5f5f5);
+    border-bottom: 1px solid var(--md-default-fg-color--lightest, rgba(0, 0, 0, 0.12));
+}
+
+.ginga-playground-tab {
+    padding: 0.45rem 0.9rem;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    border-radius: 6px 6px 0 0;
+    background: transparent;
+    color: var(--md-default-fg-color--light, currentColor);
+    font-family: var(--md-code-font-family);
+    font-size: 0.78rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.ginga-playground-tab:hover {
+    color: var(--md-default-fg-color, currentColor);
+}
+
+.ginga-playground-tab[aria-selected="true"] {
+    background-color: var(--md-default-bg-color, #ffffff);
+    border-color: var(--md-default-fg-color--lightest, rgba(0, 0, 0, 0.12));
+    color: var(--md-default-fg-color, currentColor);
+    font-weight: 600;
+}
+
+.ginga-playground {
+    display: block;
+    width: 100%;
+    height: 600px;
+    border: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .ginga-playground {
+        height: 500px;
+    }
+}
+
