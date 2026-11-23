@@ -4,6 +4,7 @@ help:
 	@echo "Available Makefile targets:"
 	@echo "  help          - Show this help message"
 	@echo "  deps          - Setup project and install dependencies"
+	@echo "  test          - Run unit tests"
 	@echo "  build         - Build the site"
 	@echo "  serve         - Serve the site locally with a development server"
 	@echo "  zip           - Build and package site directory into site.zip"
@@ -12,15 +13,18 @@ help:
 	@echo "  clean         - Cleanup built site and cache files"
 
 deps:
-	pip install zensical
+	pip install zensical pytest playwright
+
+test:
+	python -m pytest
 
 build:
-	zensical build
+	python -m zensical build
 
 zip: build build-playground
 	python -c "import shutil; shutil.make_archive('site', 'zip', 'site')"
 
-deploy-folder: build
+deploy-folder: build test
 	$(if $(strip $(GINGA_ORG_DEPLOY)),,$(error GINGA_ORG_DEPLOY is not set))
 	@target_dir="$$(realpath -m "$(GINGA_ORG_DEPLOY)")"; \
 	mounted=0; \
