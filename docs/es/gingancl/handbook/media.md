@@ -9,13 +9,16 @@ Explore los ejemplos de `<media>` a continuación:
 <div class="ginga-playground-container">
 
 <nav class="ginga-playground-tabs" role="tablist" aria-label="Ejemplos de Ginga Playground">
-  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/image.ncl">image.ncl</button>
-  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="false" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/video.ncl">video.ncl</button>
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/media_image.ncl">media_image.ncl</button>
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="false" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/media_video.ncl">media_video.ncl</button>
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="false" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/media_nclua.ncl">media_nclua.ncl</button>
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="false" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/media_ncl.ncl">media_ncl.ncl</button>
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="false" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/media_html.ncl">media_html.ncl</button>
 </nav>
 
 <iframe
   class="ginga-playground"
-  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/image.ncl"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/media_image.ncl"
   loading="lazy"
   allow="autoplay; fullscreen">
 </iframe>

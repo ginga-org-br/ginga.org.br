@@ -4,6 +4,23 @@ title: "Element &lt;bind&gt;"
 
 # &lt;bind&gt;
 
+Explore the `<bind>` example below:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ginga Playground examples">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/bind.ncl">bind.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/bind.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 The [&lt;bind&gt;](bind.md) element allows associating an interface of an object with a
 connector role.
 

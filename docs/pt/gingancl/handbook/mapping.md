@@ -4,6 +4,23 @@ title: "Elemento &lt;mapping&gt;"
 
 # &lt;mapping&gt;
 
+Explore o exemplo de `<mapping>` abaixo:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Exemplos do Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/mapping.ncl">mapping.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/mapping.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 Um elemento de mapeamento define um caminho de [&lt;switchPort&gt;](switchport.md) para uma interface
 (atributo de interface) de um dos componentes do switch (especificado por seu
 atributo do componente).

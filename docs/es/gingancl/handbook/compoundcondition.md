@@ -4,6 +4,23 @@ title: "Elemento &lt;compoundCondition&gt;"
 
 # &lt;compoundCondition&gt;
 
+Explore el ejemplo de `<compoundCondition>` a continuación:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ejemplos de Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/compoundCondition.ncl">compoundCondition.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/compoundCondition.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 El elemento [&lt;compoundCondition&gt;](compoundcondition.md) define una expresión lógica entre sus
 elementos secundarios mediante su atributo booleano *operador*.
 

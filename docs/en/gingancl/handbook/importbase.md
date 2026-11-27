@@ -4,6 +4,23 @@ title: "Element &lt;importBase&gt;"
 
 # &lt;importBase&gt;
 
+Explore the `<importBase>` example below:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ginga Playground examples">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/importBase.ncl">importBase.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/importBase.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 The [&lt;importBase&gt;](importbase.md) element allows for incorporating an entity base
 (represented by [&lt;connectorBase&gt;](connectorbase.md), [&lt;regionBase&gt;](regionbase.md),
 [&lt;descriptorBase&gt;](descriptorbase.md), [&lt;ruleBase&gt;](rulebase.md) or [&lt;transitionBase&gt;](transitionbase.md)

@@ -4,6 +4,23 @@ title: "Elemento &lt;connectorParam&gt;"
 
 # &lt;connectorParam&gt;
 
+Explore o exemplo de `<connectorParam>` abaixo:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Exemplos do Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/connectorParam.ncl">connectorParam.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/connectorParam.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 O elemento [&lt;connectorParam&gt;](connectorparam.md) é usado para parametrizar o conector
 valores de atributos.  Qualquer atributo definido por um elemento [&lt;causalConnector&gt;](causalconnector.md)
 ou por seus elementos descendentes pode ter seu valor especificado como parâmetro

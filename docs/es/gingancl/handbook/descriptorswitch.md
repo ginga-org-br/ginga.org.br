@@ -4,6 +4,23 @@ title: "Elemento &lt;descriptorSwitch&gt;"
 
 # &lt;descriptorSwitch&gt;
 
+Explore el ejemplo de `<descriptorSwitch>` a continuación:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ejemplos de Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/descriptorSwitch.ncl">descriptorSwitch.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/descriptorSwitch.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 El elemento [&lt;descriptorSwitch&gt;](descriptorswitch.md) contiene un conjunto de alternativas
 descriptores que se asociarán con un objeto.  La elección se hace durante
 tiempo de presentación.

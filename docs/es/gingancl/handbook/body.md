@@ -4,6 +4,23 @@ title: "Elemento &lt;body&gt;"
 
 # &lt;body&gt;
 
+Explore el ejemplo de `<body>` a continuación:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ejemplos de Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/body.ncl">body.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/body.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 El elemento [&lt;body&gt;](body.md) define el cuerpo del documento.
 
 Todos los activos multimedia que definen una aplicación NCL junto con las relaciones.

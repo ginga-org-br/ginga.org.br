@@ -4,6 +4,23 @@ title: "Element &lt;connectorBase&gt;"
 
 # &lt;connectorBase&gt;
 
+Explore the `<connectorBase>` example below:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ginga Playground examples">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/connectorBase.ncl">connectorBase.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/connectorBase.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 The [&lt;connectorBase&gt;](connectorbase.md) element groups relations defined using connectors.
 
 Connectors can be directly defined in [&lt;connectorBase&gt;](connectorbase.md) element that is

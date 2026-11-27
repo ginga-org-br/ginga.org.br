@@ -4,6 +4,23 @@ title: "Elemento &lt;port&gt;"
 
 # &lt;port&gt;
 
+Explore el ejemplo de `<port>` a continuación:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ejemplos de Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/port.ncl">port.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/port.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 Nodos compuestos de NCL, representados por [&lt;body&gt;](body.md), [&lt;context&gt;](context.md) y
 [&lt;switch&gt;](switch.md) elementos, encapsula sus componentes secundarios.  Interfaces de
 Los componentes secundarios no son visibles para las relaciones definidas fuera del

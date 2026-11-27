@@ -4,6 +4,23 @@ title: "Elemento &lt;descriptorParam&gt;"
 
 # &lt;descriptorParam&gt;
 
+Explore o exemplo de `<descriptorParam>` abaixo:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Exemplos do Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/descriptorParam.ncl">descriptorParam.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/descriptorParam.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 Os elementos [&lt;descriptorParam&gt;](descriptorparam.md) definem valores iniciais para propriedades de
 um elemento [&lt;media&gt;](media.md). A propriedade é identificada no *nome*
 atributo do elemento [&lt;descriptorParam&gt;](descriptorparam.md) e o valor é definido em

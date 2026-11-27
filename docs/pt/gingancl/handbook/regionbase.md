@@ -4,6 +4,23 @@ title: "Elemento &lt;regionBase&gt;"
 
 # &lt;regionBase&gt;
 
+Explore o exemplo de `<regionBase>` abaixo:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Exemplos do Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/regionBase.ncl">regionBase.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/regionBase.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 O elemento [&lt;regionBase&gt;](regionbase.md) agrupa um conjunto de elementos [&lt;region&gt;](region.md), cada um
 dos quais podem conter outro conjunto de elementos [&lt;region&gt;](region.md) aninhados, e assim
 ligado, recursivamente.

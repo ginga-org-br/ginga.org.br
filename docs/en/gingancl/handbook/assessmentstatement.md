@@ -4,6 +4,23 @@ title: "Element &lt;assessmentStatement&gt;"
 
 # &lt;assessmentStatement&gt;
 
+Explore the `<assessmentStatement>` example below:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ginga Playground examples">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/assessmentStatement.ncl">assessmentStatement.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/assessmentStatement.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 The [&lt;assessmentStatement&gt;](assessmentstatement.md) element is used to compare variable values
 specified in [&lt;attributeAssessment&gt;](attributeassessment.md) elements, or to compare the values
 of these variables with absolute values specified in [&lt;valueAssessment&gt;](valueassessment.md)

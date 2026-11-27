@@ -4,6 +4,23 @@ title: "Elemento &lt;switch&gt;"
 
 # &lt;switch&gt;
 
+Explore el ejemplo de `<switch>` a continuación:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ejemplos de Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/switch.ncl">switch.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/switch.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 El elemento [&lt;switch&gt;](switch.md) permite definir objetos alternativos
 (representado por [&lt;media&gt;](media.md), [&lt;context&gt;](context.md) u otro [&lt;switch&gt;](switch.md)
 elementos) a presentar.  La elección se realiza durante el tiempo de presentación.

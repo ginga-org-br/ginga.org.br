@@ -1,12 +1,22 @@
 from html.parser import HTMLParser
+import importlib.util
 import posixpath
 import re
+from types import SimpleNamespace
 from urllib.parse import unquote, urlsplit
 import xml.etree.ElementTree as ET
 
 import pytest
 
 from conftest import DOCS_DIR, LOCALES, ROOT_DIR, SITE_DIR
+
+
+def load_deploy_folder_module():
+    script_path = ROOT_DIR / "scripts" / "deploy_folder.py"
+    spec = importlib.util.spec_from_file_location("deploy_folder", script_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 def collect_nav_files(node):
@@ -275,3 +285,27 @@ def test_key_pages_load_without_page_errors(browser, site_server):
             assert page_errors == []
     finally:
         context.close()
+
+
+def test_deploy_folder_script_validates_mount_and_invokes_rsync(monkeypatch, tmp_path):
+    df = load_deploy_folder_module()
+    assert df.deploy_folder("") == 1
+
+    monkeypatch.setattr(df, "find_mount_dir", lambda p: None)
+    assert df.deploy_folder(str(tmp_path)) == 1
+
+    recorded_cmds = []
+    monkeypatch.setattr(df, "find_mount_dir", lambda p: "/mnt/ftpes")
+    monkeypatch.setattr(df, "get_fstype", lambda m: "fuse.rclone")
+
+    def fake_run(cmd, **kwargs):
+        recorded_cmds.append(cmd)
+        return SimpleNamespace(returncode=0, stdout="", stderr="")
+
+    monkeypatch.setattr(df.subprocess, "run", fake_run)
+    rc = df.deploy_folder("/mnt/ftpes/public_html", site_dir=tmp_path / "site")
+    assert rc == 0
+    assert len(recorded_cmds) == 1
+    assert recorded_cmds[0][:3] == ["rsync", "-rlptcO", "--delete-after"]
+    assert "/gingaf" in recorded_cmds[0]
+    assert recorded_cmds[0][-1] == "/mnt/ftpes/public_html"

@@ -4,6 +4,23 @@ title: "Elemento &lt;causalConnector&gt;"
 
 # &lt;causalConnector&gt;
 
+Explore o exemplo de `<causalConnector>` abaixo:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Exemplos do Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/causalConnector.ncl">causalConnector.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/causalConnector.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 O elemento [&lt;causalConnector&gt;](causalconnector.md) representa uma relação causal que pode ser
 usado para criar relacionamentos (elementos [&lt;link&gt;](link.md)) em documentos NCL.  Em
 uma relação causal, uma condição deve ser satisfeita para desencadear uma

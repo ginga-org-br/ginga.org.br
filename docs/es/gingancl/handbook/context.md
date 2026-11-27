@@ -4,6 +4,23 @@ title: "Elemento &lt;context&gt;"
 
 # &lt;context&gt;
 
+Explore el ejemplo de `<context>` a continuación:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ejemplos de Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/context.ncl">context.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/context.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 El elemento [&lt;context&gt;](context.md) permite estructurar una aplicación NCL. el
 El elemento puede contener elementos con contenido multimedia ([&lt;media&gt;](media.md) elementos),
 llamados objetos multimedia, otros elementos [&lt;context&gt;](context.md) anidados, elementos

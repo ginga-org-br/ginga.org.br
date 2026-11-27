@@ -4,6 +4,23 @@ title: "Elemento &lt;area&gt;"
 
 # &lt;area&gt;
 
+Explore el ejemplo de `<area>` a continuación:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ejemplos de Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/area.ncl">area.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/area.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 El elemento [&lt;area&gt;](area.md) permite definir un ancla de contenido (un subconjunto de
 unidades de información del contenido de un [&lt;media&gt;](media.md) elemento) que pueden usarse en
 relaciones con otros objetos en una aplicación NCL.

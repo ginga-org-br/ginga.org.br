@@ -4,6 +4,23 @@ title: "Elemento &lt;region&gt;"
 
 # &lt;region&gt;
 
+Explore el ejemplo de `<region>` a continuación:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ejemplos de Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/region.ncl">region.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/region.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 El elemento [&lt;region&gt;](region.md) define los valores iniciales para los lados izquierdo, derecho,
 Propiedades superior, inferior, altura, ancho y zIndex de un elemento [&lt;media&gt;](media.md)
 que indirectamente se refiere a él mediante el uso de un elemento [&lt;descriptor&gt;](descriptor.md).

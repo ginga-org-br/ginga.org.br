@@ -4,6 +4,23 @@ title: "Elemento &lt;compoundStatement&gt;"
 
 # &lt;compoundStatement&gt;
 
+Explore o exemplo de `<compoundStatement>` abaixo:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Exemplos do Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/compoundStatement.ncl">compoundStatement.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/compoundStatement.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 O elemento [&lt;compoundStatement&gt;](compoundstatement.md) define uma expressão lógica entre seus
 elementos filhos ([&lt;assessmentStatement&gt;](assessmentstatement.md) e [&lt;compoundStatement&gt;](compoundstatement.md)) por
 por meio de um atributo booleano *operador*.

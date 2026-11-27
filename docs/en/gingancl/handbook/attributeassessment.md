@@ -4,6 +4,23 @@ title: "Element &lt;attributeAssessment&gt;"
 
 # &lt;attributeAssessment&gt;
 
+Explore the `<attributeAssessment>` example below:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ginga Playground examples">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/attributeAssessment.ncl">attributeAssessment.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/attributeAssessment.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 The [&lt;attributeAssessment&gt;](attributeassessment.md) element is used to define a variable to be
 evaluated, in [&lt;assessmentStatement&gt;](assessmentstatement.md) elements, against other variable
 values or an absolute value.

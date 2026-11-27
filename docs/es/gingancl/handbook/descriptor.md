@@ -4,6 +4,23 @@ title: "Elemento &lt;descriptor&gt;"
 
 # &lt;descriptor&gt;
 
+Explore el ejemplo de `<descriptor>` a continuación:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ejemplos de Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/descriptor.ncl">descriptor.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/descriptor.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 El elemento [&lt;descriptor&gt;](descriptor.md) define los valores iniciales para las propiedades de
 [&lt;media&gt;](media.md) elementos.  Estos valores iniciales se definen en atributos de
 el elemento, o en elementos secundarios [&lt;descriptorParam&gt;](descriptorparam.md).

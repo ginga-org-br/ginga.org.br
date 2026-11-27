@@ -4,6 +4,23 @@ title: "Element &lt;port&gt;"
 
 # &lt;port&gt;
 
+Explore the `<port>` example below:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ginga Playground examples">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/port.ncl">port.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/port.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 Composite nodes of NCL, represented by [&lt;body&gt;](body.md), [&lt;context&gt;](context.md), and
 [&lt;switch&gt;](switch.md) elements, encapsulates their child components.  Interfaces of
 child components are not visible to relationships defined outside of the

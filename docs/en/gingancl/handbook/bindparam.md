@@ -4,6 +4,23 @@ title: "Element &lt;bindParam&gt;"
 
 # &lt;bindParam&gt;
 
+Explore the `<bindParam>` example below:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ginga Playground examples">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/bindParam.ncl">bindParam.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/bindParam.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 The [&lt;bindParam&gt;](bindparam.md) element is used to attribute a value to a parameter
 defined by the [&lt;connectorParam&gt;](connectorparam.md) element of the [&lt;causalConnector&gt;](causalconnector.md)
 element referred by the parent [&lt;link&gt;](link.md) element.  The scope of the

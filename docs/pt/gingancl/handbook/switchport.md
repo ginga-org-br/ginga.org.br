@@ -4,6 +4,23 @@ title: "Elemento &lt;switchPort&gt;"
 
 # &lt;switchPort&gt;
 
+Explore o exemplo de `<switchPort>` abaixo:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Exemplos do Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/switchPort.ncl">switchPort.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/switchPort.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 O elemento [&lt;switchPort&gt;](switchport.md) define um mapeamento para um subconjunto do
 [&lt;switch&gt;](switch.md) componentes do elemento.  Todas as referências a um switch interno
 componente deve ser feito através de um elemento [&lt;switchPort&gt;](switchport.md) ou, por padrão,

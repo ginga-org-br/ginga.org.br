@@ -4,6 +4,23 @@ title: "Elemento &lt;head&gt;"
 
 # &lt;head&gt;
 
+Explore o exemplo de `<head>` abaixo:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Exemplos do Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/head.ncl">head.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/head.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 A tag [&lt;head&gt;](head.md) é o contêiner para todos os elementos principais.
 
 Elementos filhos do elemento [&lt;head&gt;](head.md) promovem instalações de reutilização em NCL

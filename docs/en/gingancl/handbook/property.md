@@ -4,6 +4,23 @@ title: "Element &lt;property&gt;"
 
 # &lt;property&gt;
 
+Explore the `<property>` example below:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ginga Playground examples">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/property.ncl">property.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/property.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 The [&lt;property&gt;](property.md) element defines a property or a group of properties for
 its parent [&lt;media&gt;](media.md), [&lt;context&gt;](context.md), [&lt;body&gt;](body.md), or [&lt;switch&gt;](switch.md)
 elements. These properties may be used in relationships with other objects

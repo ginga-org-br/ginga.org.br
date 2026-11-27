@@ -4,6 +4,23 @@ title: "Elemento &lt;importNCL&gt;"
 
 # &lt;importNCL&gt;
 
+Explore o exemplo de `<importNCL>` abaixo:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Exemplos do Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/importNCL.ncl">importNCL.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/importNCL.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 O elemento [&lt;importNCL&gt;](importncl.md) permite incorporar outro documento NCL
 especificação.  Como consequência, todas as bases definidas dentro do NCL importado
 documento, bem como o elemento [&lt;body&gt;](body.md) do documento, são importados, todos em

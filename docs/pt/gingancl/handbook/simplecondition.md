@@ -4,6 +4,23 @@ title: "Elemento &lt;simpleCondition&gt;"
 
 # &lt;simpleCondition&gt;
 
+Explore o exemplo de `<simpleCondition>` abaixo:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Exemplos do Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/simpleCondition.ncl">simpleCondition.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/simpleCondition.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 O elemento [&lt;simpleCondition&gt;](simplecondition.md) define uma condição simples para acionar
 ações em uma relação causal.
 

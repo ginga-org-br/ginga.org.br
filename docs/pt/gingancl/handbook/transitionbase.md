@@ -4,6 +4,23 @@ title: "Elemento &lt;transitionBase&gt;"
 
 # &lt;transitionBase&gt;
 
+Explore o exemplo de `<transitionBase>` abaixo:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Exemplos do Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/transitionBase.ncl">transitionBase.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/transitionBase.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 O elemento [&lt;transitionBase&gt;](transitionbase.md) agrupa um conjunto de [&lt;transition&gt;](transition.md)
 elementos, cada um dos quais define um efeito de transição em [&lt;media&gt;](media.md) elementos
 na apresentação.

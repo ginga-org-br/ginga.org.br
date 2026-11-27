@@ -4,6 +4,23 @@ title: "Elemento &lt;compoundAction&gt;"
 
 # &lt;compoundAction&gt;
 
+Explore el ejemplo de `<compoundAction>` a continuación:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ejemplos de Ginga Playground">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/compoundAction.ncl">compoundAction.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/compoundAction.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
+
 El elemento [&lt;compoundAction&gt;](compoundaction.md) define una expresión lógica entre sus
 elementos secundarios ([&lt;simpleAction&gt;](simpleaction.md), [&lt;compoundAction&gt;](compoundaction.md)) mediante un
 Atributo del operador que puede recibir el valor "par" o "seq".
