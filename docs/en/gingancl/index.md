@@ -1,6 +1,29 @@
 ---
-title: About
+title: About Ginga-NCL
 ---
+
+# Ginga-NCL
+
+Explore the Ginga-NCL examples below:
+
+<div class="ginga-playground-container">
+
+<nav class="ginga-playground-tabs" role="tablist" aria-label="Ginga Playground examples">
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/media_image.ncl">media_image.ncl</button>
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="false" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/media_video.ncl">media_video.ncl</button>
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="false" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/media_nclua.ncl">media_nclua.ncl</button>
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="false" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/media_ncl.ncl">media_ncl.ncl</button>
+  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="false" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/media_html.ncl">media_html.ncl</button>
+</nav>
+
+<iframe
+  class="ginga-playground"
+  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/media_image.ncl"
+  loading="lazy"
+  allow="autoplay; fullscreen">
+</iframe>
+
+</div>
 
 Ginga-NCL is the Ginga subsystem in charge of the presentation of NCL documents and was developed at PUC-Rio (Pontifical Catholic University of Rio de Janeiro). It defines a presentation environment for declarative applications written in NCL. NCL is an XML application language that provides support for specifying spatio-temporal synchronization among media objects, media content and presentation alternatives, exhibition on multiple devices, and live producing of interactive non-linear programs
 
@@ -56,6 +79,10 @@ A specific version is specified in the URI path, where the version number "x.y" 
 The version number of an NCL document specification consists of a major number and a minor number, separated by a dot.  The numbers are represented as decimal character strings with leading zeros suppressed.  The initial standard version number is 3.0.
 
 New NCL versions shall be released in accordance to the following versioning policy.  If NCL players that conform to older versions can still receive a document based on the revised specification, due to error corrections, operational reasons, or the addition of a new concise syntax notation ("syntax sugar") that can be translated at compile time to the old one, the new version of NCL shall be released with the minor number updated.  If NCL players that conform to older versions cannot receive a document based on the revised specifications, the major number must be updated.
+
+## NCL Handbook Reference
+
+The NCL element reference pages in this section (starting with [&lt;media&gt;](handbook/media.md)) adapt the *NCL Handbook* quick reference manual by Luiz Fernando Gomes Soares and Guilherme F. Lima (Department of Informatics, PUC-Rio, No. 18/13, ISSN 0103-9741), paired with live interactive Ginga Playground examples.
 
 ## PUC-Rio Seminal Reports
 

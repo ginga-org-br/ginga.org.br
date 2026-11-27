@@ -67,7 +67,30 @@ def test_zensical_config_nav_matches_docs_on_disk(zensical_config):
         "Duplicate documentation entries detected in zensical.toml nav."
     )
     assert sorted(nav_paths - disk_paths) == []
-    assert sorted(disk_paths - nav_paths) == []
+
+    unlisted_paths = sorted(disk_paths - nav_paths)
+    for rel_path in unlisted_paths:
+        match = re.fullmatch(
+            r"(pt|en|es)/guides/(?!index\.md$)([^/]+\.md)", rel_path
+        )
+        assert match is not None, (
+            f"Unexpected unlisted markdown file outside guides: {rel_path}"
+        )
+        lang, guide_filename = match.groups()
+        guides_index = (DOCS_DIR / lang / "guides" / "index.md").read_text(
+            encoding="utf-8"
+        )
+        assert guide_filename in guides_index
+
+    for lang in LOCALES:
+        assert f"{lang}/guides/index.md" in nav_paths
+        assert f"{lang}/guides/tv3.0-architecture.md" in unlisted_paths
+        dev_tools_text = (DOCS_DIR / lang / "development-tools.md").read_text(
+            encoding="utf-8"
+        )
+        assert "Alan Guedes" not in dev_tools_text
+        assert "NCL Composer" not in dev_tools_text
+        assert "NCL Eclipse" not in dev_tools_text
 
 
 def test_all_nav_pages_built_with_nonempty_html(built_site, zensical_config):
@@ -260,11 +283,11 @@ def test_key_pages_load_without_page_errors(browser, site_server):
         "/es/",
         "/en/standards/",
         "/en/development-tools/",
+        "/en/guides/",
         "/en/guides/tv3.0-architecture/",
         "/en/gingancl/",
+        "/en/gingancl/handbook/media/",
         "/en/gingahtml5/",
-        "/en/gingaccwebservices/",
-        "/en/gingaj/",
     )
     context = browser.new_context(viewport={"width": 1280, "height": 900})
     page = context.new_page()
@@ -283,6 +306,64 @@ def test_key_pages_load_without_page_errors(browser, site_server):
             assert response.status == 200
             assert page.locator("h1").count() >= 1
             assert page_errors == []
+    finally:
+        context.close()
+
+
+def test_sidebar_sections_and_pinned_media_link_visible(browser, site_server):
+    context = browser.new_context(viewport={"width": 1280, "height": 900})
+    page = context.new_page()
+    try:
+        page.goto(site_server.url("/en/"), wait_until="load", timeout=15000)
+        sidebar = page.locator("nav.md-nav--primary")
+        sidebar_text = sidebar.inner_text()
+        expected_order = (
+            "Intro",
+            "Standards",
+            "Development Tools",
+            "Guides",
+            "NCL Apps",
+            "HTML Apps",
+        )
+        positions = [sidebar_text.index(label) for label in expected_order]
+        assert positions == sorted(positions)
+        assert "TV 3.0 Architecture" not in sidebar_text
+
+        ncl_overview_link = sidebar.locator("a.md-nav__link", has_text="Overview").first
+        assert ncl_overview_link.is_visible()
+        ncl_overview_link.click()
+        page.wait_for_url("**/en/gingancl/", timeout=10000)
+        assert page.url.endswith("/en/gingancl/")
+        assert page.locator("iframe.ginga-playground").count() == 1
+
+        structure_item = sidebar.locator(
+            "li.md-nav__item--nested:not(.md-nav__item--section)",
+            has_text="Structure & Context",
+        ).first
+        structure_item.locator(
+            "label.md-nav__link", has_text="Structure & Context"
+        ).first.click()
+        first_structure_link = structure_item.locator("nav.md-nav a.md-nav__link").first
+        assert first_structure_link.inner_text().strip() == "<media>"
+        assert first_structure_link.is_visible()
+        first_structure_link.click()
+        page.wait_for_url("**/en/gingancl/handbook/media/", timeout=10000)
+        assert page.url.endswith("/en/gingancl/handbook/media/")
+
+        guides_link = sidebar.locator("a.md-nav__link", has_text="Guides").first
+        assert guides_link.is_visible()
+        guides_link.click()
+        page.wait_for_url("**/en/guides/", timeout=10000)
+        assert "TV 3.0 Architecture" in page.locator("article").inner_text()
+
+        page.goto(
+            site_server.url("/en/guides/tv3.0-architecture/"),
+            wait_until="load",
+            timeout=15000,
+        )
+        arch_sidebar_text = page.locator("nav.md-nav--primary").inner_text()
+        assert "Development Tools" in arch_sidebar_text
+        assert "TV 3.0 Architecture" not in arch_sidebar_text
     finally:
         context.close()
 

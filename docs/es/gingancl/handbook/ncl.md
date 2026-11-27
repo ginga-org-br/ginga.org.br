@@ -4,23 +4,6 @@ title: "Elemento &lt;ncl&gt;"
 
 # &lt;ncl&gt;
 
-Explore el ejemplo de `<ncl>` a continuación:
-
-<div class="ginga-playground-container">
-
-<nav class="ginga-playground-tabs" role="tablist" aria-label="Ejemplos de Ginga Playground">
-  <button type="button" class="ginga-playground-tab" role="tab" aria-selected="true" data-playground-src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/ncl.ncl">ncl.ncl</button>
-</nav>
-
-<iframe
-  class="ginga-playground"
-  src="https://ginga.org.br/gingaf/playground/?app=https://raw.githubusercontent.com/ginga-org-br/gingaf/refs/heads/main/examples/ginga.org.br/ncl.ncl"
-  loading="lazy"
-  allow="autoplay; fullscreen">
-</iframe>
-
-</div>
-
 El elemento [&lt;ncl&gt;](ncl.md) representa la raíz de un documento NCL.
 
 El elemento [&lt;ncl&gt;](ncl.md) es el contenedor de todos los demás elementos NCL (excepto

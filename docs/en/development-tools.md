@@ -2,30 +2,9 @@
 title: "Development Tools"
 ---
 
-<style>
-.md-typeset .guide-byline {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 6px 14px;
-  font-size: 0.72rem;
-  line-height: 1.4;
-  color: var(--md-default-fg-color--light);
-  margin: 0 0 1.2rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--md-default-fg-color--lightest);
-}
-.md-typeset .guide-byline b {
-  color: var(--md-default-fg-color);
-  font-weight: 600;
-}
-</style>
-
 # Development Tools
 
-<p class="guide-byline"><span>By <b>Alan Guedes</b> (University of Reading)</span></p>
-
-The currently maintained tools are **ginga-code** and **ginga-playground**, while the others listed below are previous tools that are no longer maintained.
+Tools for developing and running Ginga applications in NCL and HTML5.
 
 <div class="grid cards" markdown>
 
@@ -40,29 +19,5 @@ The currently maintained tools are **ginga-code** and **ginga-playground**, whil
     Online execution environment to experiment with Ginga applications (NCL and HTML5), powered by [gingaf](https://github.com/ginga-org-br/gingaf).
 
     [:octicons-arrow-right-24: Try it](/gingaf/playground/)
-
-</div>
-
-## Other Tools
-
-<div class="grid cards" markdown>
-
-- :material-web: **NCL Composer**
-
-    Multi-platform tool for authoring and developing interactive applications in NCL.
-
-    [:octicons-arrow-right-24: NCL Composer Website](http://composer.telemidia.puc-rio.br)
-
-- :material-web: **NCL Eclipse**
-
-    Plug-in for NCL development support in the Eclipse environment.
-
-    [:octicons-arrow-right-24: Download / Info](http://www.telemidia.puc-rio.br/~roberto/ncleclipse)
-
-- :material-github: **PUC-Rio Ginga implementation**
-
-    ITU-T Reference Implementation of the Ginga Player, with a graphical user interface for Windows.
-
-    [:octicons-arrow-right-24: GitHub Repository](https://github.com/TeleMidia/ginga/)
 
 </div>

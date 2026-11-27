@@ -31,7 +31,16 @@ EXPECTED_MEDIA_APP_URLS = tuple(f"{EXAMPLES_BASE_URL}/{f}" for f in EXPECTED_MED
 EXPECTED_MEDIA_PLAYGROUND_URLS = tuple(
     f"https://ginga.org.br/gingaf/playground/?app={u}" for u in EXPECTED_MEDIA_APP_URLS
 )
+EXPECTED_HTML_FILES = (
+    "image.html",
+    "current_service.html",
+)
+EXPECTED_HTML_APP_URLS = tuple(f"{EXAMPLES_BASE_URL}/{f}" for f in EXPECTED_HTML_FILES)
+EXPECTED_HTML_PLAYGROUND_URLS = tuple(
+    f"https://ginga.org.br/gingaf/playground/?app={u}" for u in EXPECTED_HTML_APP_URLS
+)
 NON_ELEMENT_HANDBOOK_PAGES = {"about", "footer"}
+ELEMENTS_WITHOUT_PLAYGROUND = {"ncl", "body"}
 
 
 class HeaderPlaygroundParser(HTMLParser):
@@ -172,6 +181,48 @@ def test_built_html_renders_playground_iframe_and_tabs(built_site, lang):
 
 
 @pytest.mark.parametrize("lang", LOCALES)
+def test_ncl_overview_page_embeds_playground_media_examples(built_site, lang):
+    html_path = built_site / lang / "gingancl" / "index.html"
+    assert html_path.is_file(), f"Missing {html_path}"
+    parser = PlaygroundHTMLParser()
+    parser.feed(html_path.read_text(encoding="utf-8"))
+
+    assert len(parser.playground_iframes) == 1
+    iframe = parser.playground_iframes[0]
+    assert iframe.get("src") == EXPECTED_MEDIA_PLAYGROUND_URLS[0]
+    assert iframe.get("title") is None
+    assert iframe.get("loading") == "lazy"
+
+    assert len(parser.playground_tabs) == len(EXPECTED_MEDIA_PLAYGROUND_URLS)
+    for idx, expected_url in enumerate(EXPECTED_MEDIA_PLAYGROUND_URLS):
+        assert parser.playground_tabs[idx].get("aria-selected") == (
+            "true" if idx == 0 else "false"
+        )
+        assert parser.playground_tabs[idx].get("data-playground-src") == expected_url
+
+
+@pytest.mark.parametrize("lang", LOCALES)
+def test_html_apps_page_embeds_playground_html_examples(built_site, lang):
+    html_path = built_site / lang / "gingahtml5" / "index.html"
+    assert html_path.is_file(), f"Missing {html_path}"
+    parser = PlaygroundHTMLParser()
+    parser.feed(html_path.read_text(encoding="utf-8"))
+
+    assert len(parser.playground_iframes) == 1
+    iframe = parser.playground_iframes[0]
+    assert iframe.get("src") == EXPECTED_HTML_PLAYGROUND_URLS[0]
+    assert iframe.get("title") is None
+    assert iframe.get("loading") == "lazy"
+
+    assert len(parser.playground_tabs) == len(EXPECTED_HTML_PLAYGROUND_URLS)
+    for idx, expected_url in enumerate(EXPECTED_HTML_PLAYGROUND_URLS):
+        assert parser.playground_tabs[idx].get("aria-selected") == (
+            "true" if idx == 0 else "false"
+        )
+        assert parser.playground_tabs[idx].get("data-playground-src") == expected_url
+
+
+@pytest.mark.parametrize("lang", LOCALES)
 def test_all_ncl_handbook_elements_embed_valid_playground_in_markdown_and_html(
     built_site, lang
 ):
@@ -194,15 +245,22 @@ def test_all_ncl_handbook_elements_embed_valid_playground_in_markdown_and_html(
     for md_file in element_files:
         md_parser = PlaygroundHTMLParser()
         md_parser.feed(md_file.read_text(encoding="utf-8"))
-        assert len(md_parser.playground_iframes) == 1, f"Missing iframe in {md_file}"
-        assert len(md_parser.playground_tabs) >= 1, f"Missing tabs in {md_file}"
-
         html_path = (
             built_site / lang / "gingancl" / "handbook" / md_file.stem / "index.html"
         )
         assert html_path.is_file(), f"Missing {html_path}"
         html_parser = PlaygroundHTMLParser()
         html_parser.feed(html_path.read_text(encoding="utf-8"))
+
+        if md_file.stem in ELEMENTS_WITHOUT_PLAYGROUND:
+            assert md_parser.playground_iframes == []
+            assert md_parser.playground_tabs == []
+            assert html_parser.playground_iframes == []
+            assert html_parser.playground_tabs == []
+            continue
+
+        assert len(md_parser.playground_iframes) == 1, f"Missing iframe in {md_file}"
+        assert len(md_parser.playground_tabs) >= 1, f"Missing tabs in {md_file}"
         assert len(html_parser.playground_iframes) == 1
         assert len(html_parser.playground_tabs) == len(md_parser.playground_tabs)
 
@@ -242,9 +300,10 @@ def test_handbook_playgrounds_match_gingaf_catalog_tags():
             continue
         file_part, _, query_part = main_file.partition("?")
         clean_file = file_part.lstrip("/")
-        assert clean_file.startswith("ginga.org.br/"), (
-            f"{app_key} ({clean_file}) is outside examples/ginga.org.br/"
-        )
+        if tags != ["html"]:
+            assert clean_file.startswith("ginga.org.br/"), (
+                f"{app_key} ({clean_file}) is outside examples/ginga.org.br/"
+            )
         rank = (
             0
             if (
@@ -264,11 +323,32 @@ def test_handbook_playgrounds_match_gingaf_catalog_tags():
         slug: [url for _, url in sorted(items, key=lambda pair: pair[0])]
         for slug, items in raw_by_slug.items()
     }
-    assert len(expected_by_slug) == 45
+    expected_html_urls = expected_by_slug.pop("html", [])
+    assert expected_html_urls == list(EXPECTED_HTML_PLAYGROUND_URLS)
+    assert "ncl" not in expected_by_slug
+    assert "body" not in expected_by_slug
+    assert len(expected_by_slug) == 43
     for slug, urls in expected_by_slug.items():
         assert "/examples/ginga.org.br/" in urls[0], (
             f"Priority ginga.org.br/ example is not first for {slug}: {urls}"
         )
+
+    for lang in LOCALES:
+        ncl_md_path = DOCS_DIR / lang / "gingancl" / "index.md"
+        assert ncl_md_path.is_file()
+        ncl_md_parser = PlaygroundHTMLParser()
+        ncl_md_parser.feed(ncl_md_path.read_text(encoding="utf-8"))
+        assert [
+            t.get("data-playground-src") for t in ncl_md_parser.playground_tabs
+        ] == expected_by_slug["media"]
+
+        html_md_path = DOCS_DIR / lang / "gingahtml5" / "index.md"
+        assert html_md_path.is_file()
+        html_md_parser = PlaygroundHTMLParser()
+        html_md_parser.feed(html_md_path.read_text(encoding="utf-8"))
+        assert [
+            t.get("data-playground-src") for t in html_md_parser.playground_tabs
+        ] == expected_html_urls
 
     for lang in LOCALES:
         for slug, expected_urls in expected_by_slug.items():

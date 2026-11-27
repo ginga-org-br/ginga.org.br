@@ -1,6 +1,3 @@
-{#-
-  Custom nav.html override to scope the navigation sidebar strictly to the active language section.
--#}
 {% import "partials/nav-item.html" as item with context %}
 {% set class = "md-nav md-nav--primary" %}
 {% if "navigation.tabs" in features %}
@@ -9,6 +6,7 @@
 {% if "toc.integrate" in features %}
   {% set class = class ~ " md-nav--integrated" %}
 {% endif %}
+{% set page_url = (page.url if page and page.url else "") %}
 <nav class="{{ class }}" aria-label="{{ lang.t('nav') }}" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-nav__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
@@ -24,7 +22,8 @@
   <ul class="md-nav__list" data-md-scrollfix>
     {% set active_found = namespace(value=false) %}
     {% for nav_item in nav.items %}
-      {% if nav_item.active %}
+      {% set lang_match = (nav_item.title == "Português" and page_url[:3] == "pt/") or (nav_item.title == "English" and page_url[:3] == "en/") or (nav_item.title == "Español" and page_url[:3] == "es/") %}
+      {% if nav_item.active or lang_match %}
         {% set active_found.value = true %}
         {% if nav_item.children %}
           {% for child in nav_item.children %}

@@ -36,6 +36,42 @@ I18N = {
     ),
 }
 
+NCL_OVERVIEW_I18N = {
+    "en": (
+        "Explore the Ginga-NCL example below:",
+        "Explore the Ginga-NCL examples below:",
+        "Ginga Playground examples",
+    ),
+    "pt": (
+        "Explore o exemplo de Ginga-NCL abaixo:",
+        "Explore os exemplos de Ginga-NCL abaixo:",
+        "Exemplos do Ginga Playground",
+    ),
+    "es": (
+        "Explore el ejemplo de Ginga-NCL a continuación:",
+        "Explore los ejemplos de Ginga-NCL a continuación:",
+        "Ejemplos de Ginga Playground",
+    ),
+}
+
+HTML_I18N = {
+    "en": (
+        "Explore the Ginga-HTML5 example below:",
+        "Explore the Ginga-HTML5 examples below:",
+        "Ginga Playground examples",
+    ),
+    "pt": (
+        "Explore o exemplo de Ginga-HTML5 abaixo:",
+        "Explore os exemplos de Ginga-HTML5 abaixo:",
+        "Exemplos do Ginga Playground",
+    ),
+    "es": (
+        "Explore el ejemplo de Ginga-HTML5 a continuación:",
+        "Explore los ejemplos de Ginga-HTML5 a continuación:",
+        "Ejemplos de Ginga Playground",
+    ),
+}
+
 BLOCK_RE = re.compile(
     r'\n+Explore [^\n]+:\n+<div class="ginga-playground-container">.*?</div>\n+',
     re.S,
@@ -206,6 +242,54 @@ def sync_handbook_playgrounds(catalog_data, docs_dir=DEFAULT_DOCS_DIR):
             if new_text != text:
                 md_path.write_text(new_text, encoding="utf-8")
                 updated += 1
+
+        ncl_overview_path = docs_root / lang / "gingancl" / "index.md"
+        if ncl_overview_path.is_file():
+            media_files = by_slug.get("media", [])
+            ncl_text = ncl_overview_path.read_text(encoding="utf-8")
+            ncl_cleaned = BLOCK_RE.sub("\n\n", ncl_text)
+            if not media_files:
+                if ncl_cleaned != ncl_text:
+                    ncl_overview_path.write_text(ncl_cleaned, encoding="utf-8")
+                    updated += 1
+            else:
+                m_h1 = H1_RE.search(ncl_cleaned)
+                if m_h1:
+                    n_one, n_many, n_aria = NCL_OVERVIEW_I18N[lang]
+                    tabs = build_tabs(media_files)
+                    widget = render_playground_block(
+                        "Ginga-NCL", tabs, n_one, n_many, n_aria
+                    )
+                    pos = m_h1.end()
+                    rest = ncl_cleaned[pos:].lstrip("\n")
+                    new_ncl_text = ncl_cleaned[:pos] + widget + rest
+                    if new_ncl_text != ncl_text:
+                        ncl_overview_path.write_text(new_ncl_text, encoding="utf-8")
+                        updated += 1
+
+        html_path = docs_root / lang / "gingahtml5" / "index.md"
+        if html_path.is_file():
+            html_files = by_slug.get("html", [])
+            html_text = html_path.read_text(encoding="utf-8")
+            html_cleaned = BLOCK_RE.sub("\n\n", html_text)
+            if not html_files:
+                if html_cleaned != html_text:
+                    html_path.write_text(html_cleaned, encoding="utf-8")
+                    updated += 1
+            else:
+                m_h1 = H1_RE.search(html_cleaned)
+                if m_h1:
+                    h_one, h_many, h_aria = HTML_I18N[lang]
+                    tabs = build_tabs(html_files)
+                    widget = render_playground_block(
+                        "Ginga-HTML5", tabs, h_one, h_many, h_aria
+                    )
+                    pos = m_h1.end()
+                    rest = html_cleaned[pos:].lstrip("\n")
+                    new_html_text = html_cleaned[:pos] + widget + rest
+                    if new_html_text != html_text:
+                        html_path.write_text(new_html_text, encoding="utf-8")
+                        updated += 1
 
     return updated
 

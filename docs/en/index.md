@@ -23,17 +23,13 @@ Welcome to the documentation of Ginga middleware maintained by the TeleMidia lab
 
     [:octicons-arrow-right-24: Learn more](gingahtml5/index.md)
 
-- __Ginga-CC-Webservices__
+- __Ginga-CC-WebServices__
 
-    The Ginga Common Core Web Services integration subsystem.
-
-    [:octicons-arrow-right-24: Learn more](gingaccwebservices/index.md)
+    The Ginga Common Core Web Services integration subsystem, establishing standardized REST and WebSocket services for interactive TV applications across compliant receiver platforms.
 
 - __Ginga-J__
 
-    The procedural subsystem of Ginga based on Java technologies.
-
-    [:octicons-arrow-right-24: Learn more](gingaj.md)
+    The historical procedural execution environment of Ginga for the Brazilian Digital Terrestrial Television System (SBTVD), based on Java technologies.
 
 </div>
 
